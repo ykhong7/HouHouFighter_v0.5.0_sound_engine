@@ -1,0 +1,33 @@
+{
+  "id": 6,
+  "key": "bokjujok",
+  "name": "폭주족",
+  "grade": "EPIC",
+  "hp": 60,
+  "atk": 25,
+  "def": 40,
+  "attackSpeed": 4,
+  "attackArea": 45,
+  "attackRange": 90,
+  "moveSpeed": 120,
+  "bodyRadius": 48,
+  "stopGap": 16,
+  "critRate": 0.15,
+  "critDamage": 1.5,
+  "attackType": "melee",
+  "frameSize": 96,
+  "spritePath": "assets/characters/bokjujok/",
+  "effectPath": "assets/effects/bokjujok/attack.png",
+  "effectFrames": 6,
+  "gachaRate": 10,
+  "attackMethod": "손이 여러 개 보이도록 공격",
+  "feature": "공격시 손이 와다다다하는 느낌",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  },
+  "aiType": "rush"
+}

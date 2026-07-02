@@ -1,0 +1,33 @@
+{
+  "id": 7,
+  "key": "jjabbeorin",
+  "name": "짭버린",
+  "grade": "EPIC",
+  "hp": 60,
+  "atk": 25,
+  "def": 50,
+  "attackSpeed": 4,
+  "attackArea": 45,
+  "attackRange": 90,
+  "moveSpeed": 90,
+  "bodyRadius": 48,
+  "stopGap": 16,
+  "critRate": 0.15,
+  "critDamage": 1.5,
+  "attackType": "melee",
+  "frameSize": 96,
+  "spritePath": "assets/characters/jjabbeorin/",
+  "effectPath": "assets/effects/jjabbeorin/attack.png",
+  "effectFrames": 6,
+  "gachaRate": 10,
+  "attackMethod": "손등에 튀어나온 칼날손톱으로 공격",
+  "feature": "칼날손톱은 바람을 가로지르듯 파란색으로 표현",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  },
+  "aiType": "rush"
+}

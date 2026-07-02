@@ -1,0 +1,33 @@
+{
+  "id": 3,
+  "key": "gomangi",
+  "name": "고망이",
+  "grade": "RARE",
+  "hp": 90,
+  "atk": 20,
+  "def": 50,
+  "damageReduction": 0.1,
+  "attackSpeed": 1,
+  "attackArea": 45,
+  "attackRange": 100,
+  "moveSpeed": 70,
+  "bodyRadius": 64,
+  "stopGap": 16,
+  "critRate": 0.15,
+  "critDamage": 1.5,
+  "attackType": "melee",
+  "frameSize": 96,
+  "spritePath": "assets/characters/gomangi/",
+  "effectPath": "assets/effects/gomangi/attack.png",
+  "effectFrames": 5,
+  "gachaRate": 10,
+  "attackMethod": "주먹을 위에서 아래로 내려친다",
+  "feature": "받은 공격의 피해를 10% 감소",
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  }
+}

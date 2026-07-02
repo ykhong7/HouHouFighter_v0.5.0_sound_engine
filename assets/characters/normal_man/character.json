@@ -1,0 +1,29 @@
+{
+  "id": 1,
+  "key": "normal_man",
+  "name": "걍사람",
+  "grade": "NORMAL",
+  "hp": 90,
+  "atk": 10,
+  "def": 20,
+  "attackSpeed": 1,
+  "attackArea": 45,
+  "attackRange": 85,
+  "moveSpeed": 95,
+  "bodyRadius": 48,
+  "stopGap": 16,
+  "critRate": 0.15,
+  "critDamage": 1.8,
+  "attackType": "melee",
+  "frameSize": 96,
+  "spritePath": "assets/characters/normal_man/",
+  "effectPath": "assets/effects/normal_man/attack.png",
+  "effectFrames": 5,
+  "animations": {
+    "idle": 2,
+    "walk": 4,
+    "attack": 3,
+    "hit": 1,
+    "dead": 2
+  }
+}

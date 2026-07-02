@@ -1,0 +1,40 @@
+{
+  "pool": [
+    {
+      "key": "normal_man",
+      "rate": 18
+    },
+    {
+      "key": "meongdungi",
+      "rate": 19
+    },
+    {
+      "key": "eungae",
+      "rate": 14
+    },
+    {
+      "key": "gomangi",
+      "rate": 10
+    },
+    {
+      "key": "bokjujok",
+      "rate": 10
+    },
+    {
+      "key": "jjabbeorin",
+      "rate": 10
+    },
+    {
+      "key": "awakened_normal_man",
+      "rate": 5
+    },
+    {
+      "key": "storm_spirit",
+      "rate": 5
+    },
+    {
+      "key": "vampire_king",
+      "rate": 5
+    }
+  ]
+}
