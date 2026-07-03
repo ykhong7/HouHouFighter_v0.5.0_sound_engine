@@ -3,13 +3,13 @@
   "key": "normal_man",
   "name": "걍사람",
   "grade": "NORMAL",
-  "hp": 90,
+  "hp": 180,
   "atk": 10,
   "def": 20,
   "attackSpeed": 1,
   "attackArea": 45,
-  "attackRange": 85,
-  "moveSpeed": 95,
+  "attackRange": 2,
+  "moveSpeed": 2,
   "bodyRadius": 48,
   "stopGap": 16,
   "critRate": 0.15,
@@ -25,5 +25,13 @@
     "attack": 3,
     "hit": 1,
     "dead": 2
-  }
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gachaRate": 10,
+  "gridMoveSpeed": 2,
+  "gridAttackRange": 2,
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96
 }

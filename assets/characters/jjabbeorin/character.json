@@ -3,13 +3,13 @@
   "key": "jjabbeorin",
   "name": "짭버린",
   "grade": "EPIC",
-  "hp": 60,
+  "hp": 120,
   "atk": 25,
   "def": 50,
   "attackSpeed": 4,
   "attackArea": 45,
-  "attackRange": 90,
-  "moveSpeed": 90,
+  "attackRange": 2,
+  "moveSpeed": 2,
   "bodyRadius": 48,
   "stopGap": 16,
   "critRate": 0.15,
@@ -29,5 +29,12 @@
     "hit": 1,
     "dead": 2
   },
-  "aiType": "rush"
+  "aiType": "rush",
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 2,
+  "gridAttackRange": 2,
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96
 }

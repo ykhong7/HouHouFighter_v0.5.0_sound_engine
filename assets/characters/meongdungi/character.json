@@ -3,13 +3,13 @@
   "key": "meongdungi",
   "name": "멍둥이",
   "grade": "NORMAL",
-  "hp": 90,
+  "hp": 180,
   "atk": 15,
   "def": 20,
   "attackSpeed": 1,
   "attackArea": 60,
-  "attackRange": 220,
-  "moveSpeed": 70,
+  "attackRange": 2,
+  "moveSpeed": 1,
   "bodyRadius": 48,
   "stopGap": 16,
   "critRate": 0.15,
@@ -21,7 +21,7 @@
   "spritePath": "assets/characters/meongdungi/",
   "effectPath": "assets/effects/meongdungi/attack.png",
   "effectFrames": 5,
-  "gachaRate": 15,
+  "gachaRate": 10,
   "attackMethod": "입에서 돌맹이가 나옴",
   "feature": "네발로 기어다님",
   "animations": {
@@ -30,5 +30,16 @@
     "attack": 3,
     "hit": 1,
     "dead": 2
-  }
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 1,
+  "gridAttackRange": 2,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileFrames": 1,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96
 }

@@ -3,13 +3,13 @@
   "key": "vampire_king",
   "name": "뱀파이어킹",
   "grade": "SUPER EPIC",
-  "hp": 50,
+  "hp": 100,
   "atk": 35,
   "def": 50,
   "attackSpeed": 2,
   "attackArea": 90,
-  "attackRange": 300,
-  "moveSpeed": 120,
+  "attackRange": 6,
+  "moveSpeed": 3,
   "bodyRadius": 56,
   "stopGap": 18,
   "critRate": 0.15,
@@ -23,7 +23,7 @@
   "spritePath": "assets/characters/vampire_king/",
   "effectPath": "assets/effects/vampire_king/attack.png",
   "effectFrames": 6,
-  "gachaRate": 5,
+  "gachaRate": 10,
   "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다",
   "feature": "최종 데미지의 20%를 체력으로 회복",
   "animations": {
@@ -33,5 +33,15 @@
     "hit": 1,
     "dead": 2
   },
-  "aiType": "projectile"
+  "aiType": "projectile",
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 3,
+  "gridAttackRange": 6,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96
 }

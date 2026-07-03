@@ -3,13 +3,13 @@
   "key": "storm_spirit",
   "name": "폭풍정령",
   "grade": "LEGENDARY",
-  "hp": 60,
+  "hp": 120,
   "atk": 35,
   "def": 80,
   "attackSpeed": 5,
   "attackArea": 70,
-  "attackRange": 260,
-  "moveSpeed": 120,
+  "attackRange": 4,
+  "moveSpeed": 3,
   "bodyRadius": 56,
   "stopGap": 18,
   "critRate": 0.15,
@@ -22,7 +22,7 @@
   "spritePath": "assets/characters/storm_spirit/",
   "effectPath": "assets/effects/storm_spirit/attack.png",
   "effectFrames": 6,
-  "gachaRate": 5,
+  "gachaRate": 10,
   "attackMethod": "강력한 회오리를 발사",
   "feature": "머리에 바닷빛의 회오리가 돌고있고, 진한파란색의 큰 회오리를 발사",
   "animations": {
@@ -32,5 +32,15 @@
     "hit": 1,
     "dead": 2
   },
-  "aiType": "projectile"
+  "aiType": "projectile",
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 3,
+  "gridAttackRange": 4,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96
 }

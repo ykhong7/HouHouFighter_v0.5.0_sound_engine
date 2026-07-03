@@ -3,13 +3,13 @@
   "key": "eungae",
   "name": "응애",
   "grade": "NORMAL",
-  "hp": 70,
+  "hp": 140,
   "atk": 5,
   "def": 10,
   "attackSpeed": 2,
   "attackArea": 60,
-  "attackRange": 300,
-  "moveSpeed": 70,
+  "attackRange": 6,
+  "moveSpeed": 1,
   "bodyRadius": 36,
   "stopGap": 16,
   "critRate": 0.15,
@@ -21,7 +21,7 @@
   "spritePath": "assets/characters/eungae/",
   "effectPath": "assets/effects/eungae/attack.png",
   "effectFrames": 5,
-  "gachaRate": 15,
+  "gachaRate": 10,
   "attackMethod": "입에서 사탕을 뱉음",
   "feature": "작고 귀여움",
   "animations": {
@@ -30,5 +30,16 @@
     "attack": 3,
     "hit": 1,
     "dead": 2
-  }
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 1,
+  "gridAttackRange": 6,
+  "gridBattleRule": "30_columns_full_engine",
+  "projectileSpeedCells": 8,
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96,
+  "projectileFrames": 1,
+  "projectileStartFrame": 0,
+  "projectileFrameWidth": 96
 }

@@ -3,14 +3,14 @@
   "key": "gomangi",
   "name": "고망이",
   "grade": "RARE",
-  "hp": 90,
+  "hp": 180,
   "atk": 20,
   "def": 50,
   "damageReduction": 0.1,
   "attackSpeed": 1,
   "attackArea": 45,
-  "attackRange": 100,
-  "moveSpeed": 70,
+  "attackRange": 2,
+  "moveSpeed": 1,
   "bodyRadius": 64,
   "stopGap": 16,
   "critRate": 0.15,
@@ -29,5 +29,12 @@
     "attack": 3,
     "hit": 1,
     "dead": 2
-  }
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 1,
+  "gridAttackRange": 2,
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96
 }

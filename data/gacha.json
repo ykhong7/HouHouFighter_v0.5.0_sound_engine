@@ -2,15 +2,15 @@
   "pool": [
     {
       "key": "normal_man",
-      "rate": 18
+      "rate": 10
     },
     {
       "key": "meongdungi",
-      "rate": 19
+      "rate": 10
     },
     {
       "key": "eungae",
-      "rate": 14
+      "rate": 10
     },
     {
       "key": "gomangi",
@@ -26,15 +26,23 @@
     },
     {
       "key": "awakened_normal_man",
-      "rate": 5
+      "rate": 10
     },
     {
       "key": "storm_spirit",
-      "rate": 5
+      "rate": 10
     },
     {
       "key": "vampire_king",
-      "rate": 5
+      "rate": 10
+    },
+    {
+      "key": "fire_spirit",
+      "rate": 10
+    },
+    {
+      "key": "lightning_spirit",
+      "rate": 10
     }
   ]
 }

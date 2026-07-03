@@ -3,13 +3,13 @@
   "key": "awakened_normal_man",
   "name": "각성한 걍사람",
   "grade": "SPECIAL",
-  "hp": 100,
-  "atk": 50,
+  "hp": 200,
+  "atk": 35,
   "def": 80,
   "attackSpeed": 2,
   "attackArea": 70,
-  "attackRange": 160,
-  "moveSpeed": 120,
+  "attackRange": 4,
+  "moveSpeed": 3,
   "bodyRadius": 56,
   "stopGap": 18,
   "critRate": 0.15,
@@ -19,7 +19,7 @@
   "spritePath": "assets/characters/awakened_normal_man/",
   "effectPath": "assets/effects/awakened_normal_man/attack.png",
   "effectFrames": 6,
-  "gachaRate": 5,
+  "gachaRate": 10,
   "attackMethod": "온몸에서 강력한 기를 방출",
   "feature": "몸에 불꽃모양의 기가 아지랑이 처럼 나옴",
   "animations": {
@@ -28,5 +28,12 @@
     "attack": 3,
     "hit": 1,
     "dead": 2
-  }
+  },
+  "gridMovementRule": "screen_width_30_cells",
+  "gridMoveSpeed": 3,
+  "gridAttackRange": 4,
+  "gridBattleRule": "30_columns_full_engine",
+  "rangeMultiplierApplied": "x2_v0.6.1",
+  "effectStartFrame": 0,
+  "effectFrameWidth": 96
 }
