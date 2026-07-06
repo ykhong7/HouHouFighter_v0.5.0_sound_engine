@@ -13,7 +13,6 @@
   "bodyRadius": 56,
   "stopGap": 18,
   "critRate": 0.15,
-  "critDamage": 1.5,
   "attackType": "projectile",
   "projectilePath": "assets/projectiles/vampire_king/blood_wave.png",
   "projectileSpeed": 580,
@@ -25,7 +24,7 @@
   "effectFrames": 6,
   "gachaRate": 10,
   "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다",
-  "feature": "최종 데미지의 20%를 체력으로 회복",
+  "feature": "20% 흡혈",
   "animations": {
     "idle": 2,
     "walk": 4,
@@ -43,5 +42,68 @@
   "effectStartFrame": 0,
   "effectFrameWidth": 96,
   "projectileStartFrame": 0,
-  "projectileFrameWidth": 96
+  "projectileFrameWidth": 96,
+  "critDamageMin": 1.5,
+  "critDamageMax": 2.5,
+  "schemaVersion": "1.0.0-data-driven",
+  "stats": {
+    "hp": 100,
+    "attack": 35,
+    "defense": 50,
+    "attackSpeed": 2,
+    "attackArea": 90,
+    "attackRange": 6,
+    "moveSpeed": 3,
+    "bodyRadius": 56,
+    "stopGap": 18,
+    "gridMoveSpeed": 3,
+    "gridAttackRange": 6
+  },
+  "critical": {
+    "chance": 0.15,
+    "min": 1.5,
+    "max": 2.5
+  },
+  "gacha": {
+    "weight": 10
+  },
+  "combat": {
+    "attackType": "projectile",
+    "aiType": "projectile",
+    "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다",
+    "feature": "20% 흡혈"
+  },
+  "assets": {
+    "spritePath": "assets/characters/vampire_king/",
+    "effectPath": "assets/effects/vampire_king/attack.png",
+    "soundPath": null,
+    "projectilePath": "assets/projectiles/vampire_king/blood_wave.png"
+  },
+  "effect": {
+    "path": "assets/effects/vampire_king/attack.png",
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96,
+    "centerEffect": false,
+    "anchor": null,
+    "scale": 1,
+    "frameSequence": null,
+    "frameOffsets": null,
+    "hitEffect": false,
+    "hitEffectStart": 0.38
+  },
+  "projectile": {
+    "path": "assets/projectiles/vampire_king/blood_wave.png",
+    "speed": 580,
+    "speedCells": 8,
+    "frames": 6,
+    "startFrame": 0,
+    "frameWidth": 96
+  },
+  "skills": [
+    {
+      "type": "lifesteal",
+      "value": 0.2
+    }
+  ]
 }

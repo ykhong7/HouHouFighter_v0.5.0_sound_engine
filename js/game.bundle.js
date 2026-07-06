@@ -2,8 +2,21 @@ const GRID_COLS=30;
 const GRID_CELL=1280/GRID_COLS;
 const GRID_START_X=0;
 const GRID_END_X=1280;
-const BASE_DATA={"normal_man": {"id": 1, "key": "normal_man", "name": "걍사람", "grade": "NORMAL", "hp": 180, "atk": 10, "def": 20, "attackSpeed": 1, "attackArea": 45, "attackRange": 2, "moveSpeed": 2, "bodyRadius": 48, "stopGap": 16, "critRate": 0.15, "critDamage": 1.8, "attackType": "melee", "frameSize": 96, "spritePath": "assets/characters/normal_man/", "effectPath": "assets/effects/normal_man/attack.png", "effectFrames": 5, "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "soundPath": "assets/sounds/normal_man/", "gridMovementRule": "screen_width_30_cells", "gachaRate": 10, "gridMoveSpeed": 2, "gridAttackRange": 2, "gridBattleRule": "30_columns_full_engine", "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96}, "meongdungi": {"id": 2, "key": "meongdungi", "name": "멍둥이", "grade": "NORMAL", "hp": 180, "atk": 15, "def": 20, "attackSpeed": 1, "attackArea": 60, "attackRange": 2, "moveSpeed": 1, "bodyRadius": 48, "stopGap": 16, "critRate": 0.15, "critDamage": 1.5, "attackType": "projectile", "projectilePath": "assets/projectiles/meongdungi/stone.png", "projectileSpeed": 520, "frameSize": 96, "spritePath": "assets/characters/meongdungi/", "effectPath": "assets/effects/meongdungi/attack.png", "effectFrames": 5, "gachaRate": 10, "attackMethod": "입에서 돌맹이가 나옴", "feature": "네발로 기어다님", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "soundPath": "assets/sounds/meongdungi/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 1, "gridAttackRange": 2, "gridBattleRule": "30_columns_full_engine", "projectileSpeedCells": 8, "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96, "projectileFrames": 1, "projectileStartFrame": 0, "projectileFrameWidth": 96}, "gomangi": {"id": 3, "key": "gomangi", "name": "고망이", "grade": "RARE", "hp": 180, "atk": 20, "def": 50, "damageReduction": 0.1, "attackSpeed": 1, "attackArea": 45, "attackRange": 2, "moveSpeed": 1, "bodyRadius": 64, "stopGap": 16, "critRate": 0.15, "critDamage": 1.5, "attackType": "melee", "frameSize": 96, "spritePath": "assets/characters/gomangi/", "effectPath": "assets/effects/gomangi/attack.png", "effectFrames": 5, "gachaRate": 10, "attackMethod": "주먹을 위에서 아래로 내려친다", "feature": "받은 공격의 피해를 10% 감소", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "soundPath": "assets/sounds/gomangi/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 1, "gridAttackRange": 2, "gridBattleRule": "30_columns_full_engine", "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96}, "eungae": {"id": 4, "key": "eungae", "name": "응애", "grade": "NORMAL", "hp": 140, "atk": 5, "def": 10, "attackSpeed": 2, "attackArea": 60, "attackRange": 6, "moveSpeed": 1, "bodyRadius": 36, "stopGap": 16, "critRate": 0.15, "critDamage": 1.5, "attackType": "projectile", "projectilePath": "assets/projectiles/eungae/candy.png", "projectileSpeed": 620, "frameSize": 96, "spritePath": "assets/characters/eungae/", "effectPath": "assets/effects/eungae/attack.png", "effectFrames": 5, "gachaRate": 10, "attackMethod": "입에서 사탕을 뱉음", "feature": "작고 귀여움", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "soundPath": "assets/sounds/eungae/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 1, "gridAttackRange": 6, "gridBattleRule": "30_columns_full_engine", "projectileSpeedCells": 8, "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96, "projectileFrames": 1, "projectileStartFrame": 0, "projectileFrameWidth": 96}, "awakened_normal_man": {"id": 5, "key": "awakened_normal_man", "name": "각성한 걍사람", "grade": "SPECIAL", "hp": 200, "atk": 35, "def": 80, "attackSpeed": 2, "attackArea": 70, "attackRange": 4, "moveSpeed": 3, "bodyRadius": 56, "stopGap": 18, "critRate": 0.15, "critDamage": 1.5, "attackType": "melee", "frameSize": 96, "spritePath": "assets/characters/awakened_normal_man/", "effectPath": "assets/effects/awakened_normal_man/attack.png", "effectFrames": 6, "gachaRate": 10, "attackMethod": "온몸에서 강력한 기를 방출", "feature": "몸에 불꽃모양의 기가 아지랑이 처럼 나옴", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "soundPath": "assets/sounds/awakened_normal_man/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 3, "gridAttackRange": 4, "gridBattleRule": "30_columns_full_engine", "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96}, "bokjujok": {"id": 6, "key": "bokjujok", "name": "폭주족", "grade": "EPIC", "hp": 120, "atk": 25, "def": 40, "attackSpeed": 4, "attackArea": 45, "attackRange": 2, "moveSpeed": 3, "bodyRadius": 48, "stopGap": 16, "critRate": 0.15, "critDamage": 1.5, "attackType": "melee", "frameSize": 96, "spritePath": "assets/characters/bokjujok/", "effectPath": "assets/effects/bokjujok/attack.png", "effectFrames": 6, "gachaRate": 10, "attackMethod": "손이 여러 개 보이도록 공격", "feature": "공격시 손이 와다다다하는 느낌", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "aiType": "rush", "soundPath": "assets/sounds/bokjujok/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 3, "gridAttackRange": 2, "gridBattleRule": "30_columns_full_engine", "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96}, "jjabbeorin": {"id": 7, "key": "jjabbeorin", "name": "짭버린", "grade": "EPIC", "hp": 120, "atk": 25, "def": 50, "attackSpeed": 4, "attackArea": 45, "attackRange": 2, "moveSpeed": 2, "bodyRadius": 48, "stopGap": 16, "critRate": 0.15, "critDamage": 1.5, "attackType": "melee", "frameSize": 96, "spritePath": "assets/characters/jjabbeorin/", "effectPath": "assets/effects/jjabbeorin/attack.png", "effectFrames": 6, "gachaRate": 10, "attackMethod": "손등에 튀어나온 칼날손톱으로 공격", "feature": "칼날손톱은 바람을 가로지르듯 파란색으로 표현", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "aiType": "rush", "soundPath": "assets/sounds/jjabbeorin/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 2, "gridAttackRange": 2, "gridBattleRule": "30_columns_full_engine", "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96}, "storm_spirit": {"id": 8, "key": "storm_spirit", "name": "폭풍정령", "grade": "LEGENDARY", "hp": 120, "atk": 35, "def": 80, "attackSpeed": 5, "attackArea": 70, "attackRange": 4, "moveSpeed": 3, "bodyRadius": 56, "stopGap": 18, "critRate": 0.15, "critDamage": 1.5, "attackType": "projectile", "projectilePath": "assets/projectiles/storm_spirit/tornado.png", "projectileSpeed": 680, "projectileFrames": 6, "frameSize": 96, "spritePath": "assets/characters/storm_spirit/", "effectPath": "assets/effects/storm_spirit/attack.png", "effectFrames": 6, "gachaRate": 10, "attackMethod": "강력한 회오리를 발사", "feature": "머리에 바닷빛의 회오리가 돌고있고, 진한파란색의 큰 회오리를 발사", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "aiType": "projectile", "soundPath": "assets/sounds/storm_spirit/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 3, "gridAttackRange": 4, "gridBattleRule": "30_columns_full_engine", "projectileSpeedCells": 8, "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96, "projectileStartFrame": 0, "projectileFrameWidth": 96}, "vampire_king": {"id": 9, "key": "vampire_king", "name": "뱀파이어킹", "grade": "SUPER EPIC", "hp": 100, "atk": 35, "def": 50, "attackSpeed": 2, "attackArea": 90, "attackRange": 6, "moveSpeed": 3, "bodyRadius": 56, "stopGap": 18, "critRate": 0.15, "critDamage": 1.5, "attackType": "projectile", "projectilePath": "assets/projectiles/vampire_king/blood_wave.png", "projectileSpeed": 580, "projectileFrames": 6, "lifeSteal": 0.2, "frameSize": 96, "spritePath": "assets/characters/vampire_king/", "effectPath": "assets/effects/vampire_king/attack.png", "effectFrames": 6, "gachaRate": 10, "attackMethod": "술잔에 든 진한 빨간 피를 흩뿌린다", "feature": "최종 데미지의 20%를 체력으로 회복", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2}, "aiType": "projectile", "soundPath": "assets/sounds/vampire_king/", "gridMovementRule": "screen_width_30_cells", "gridMoveSpeed": 3, "gridAttackRange": 6, "gridBattleRule": "30_columns_full_engine", "projectileSpeedCells": 8, "rangeMultiplierApplied": "x2_v0.6.1", "effectStartFrame": 0, "effectFrameWidth": 96, "projectileStartFrame": 0, "projectileFrameWidth": 96}, "fire_spirit": {"id": 10, "key": "fire_spirit", "name": "불꽃정령", "grade": "LEGENDARY", "hp": 120, "atk": 30, "def": 60, "attackSpeed": 2, "attackArea": 5, "attackRange": 10, "gridAttackRange": 10, "moveSpeed": 2, "gridMoveSpeed": 2, "bodyRadius": 56, "stopGap": 18, "critRate": 0.15, "critDamage": 1.5, "attackType": "projectile", "projectilePath": "assets/projectiles/fire_spirit/fire_ground.png", "projectileSpeedCells": 8, "projectileFrames": 5, "frameSize": 96, "spritePath": "assets/characters/fire_spirit/", "effectPath": "assets/effects/fire_spirit/attack.png", "effectFrames": 5, "soundPath": "assets/sounds/fire_spirit/", "gachaRate": 10, "attackMethod": "불꽃을 손으로 쏴서 지면을 불태운다.", "feature": "불을 좋아하는 정령", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2, "win": 4}, "aiType": "projectile", "gridBattleRule": "30_columns_full_engine", "rangeMultiplierApplied": "none_fire_spirit_v0.6.5", "effectStartFrame": 1, "effectFrameWidth": 96, "projectileStartFrame": 1, "projectileFrameWidth": 96}, "lightning_spirit": {"id": 11, "key": "lightning_spirit", "name": "번개정령", "grade": "LEGENDARY", "hp": 120, "atk": 35, "def": 60, "attackSpeed": 2, "attackArea": 8, "attackRange": 10, "gridAttackRange": 10, "moveSpeed": 2, "gridMoveSpeed": 2, "bodyRadius": 56, "stopGap": 18, "critRate": 0.15, "critDamage": "1.5~2.5", "attackType": "projectile", "projectilePath": "assets/projectiles/lightning_spirit/lightning_bolt.png", "projectileSpeedCells": 10, "projectileFrames": 4, "frameSize": 96, "spritePath": "assets/characters/lightning_spirit/", "effectPath": "assets/effects/lightning_spirit/attack.png", "effectFrames": 4, "soundPath": "assets/sounds/lightning_spirit/", "gachaRate": 10, "attackMethod": "번개를 손으로 쏴서 꿰뚫는다", "feature": "번개의 정령", "animations": {"idle": 2, "walk": 4, "attack": 3, "hit": 1, "dead": 2, "win": 4}, "aiType": "projectile", "gridBattleRule": "30_columns_full_engine", "rangeMultiplierApplied": "none_lightning_spirit_v0.8.5", "effectStartFrame": 0, "effectFrameWidth": 96, "projectileStartFrame": 0, "projectileFrameWidth": 96}};
-const GACHA_DATA={"pool": [{"key": "normal_man", "rate": 10}, {"key": "meongdungi", "rate": 10}, {"key": "eungae", "rate": 10}, {"key": "gomangi", "rate": 10}, {"key": "bokjujok", "rate": 10}, {"key": "jjabbeorin", "rate": 10}, {"key": "awakened_normal_man", "rate": 10}, {"key": "storm_spirit", "rate": 10}, {"key": "vampire_king", "rate": 10}, {"key": "fire_spirit", "rate": 10}, {"key": "lightning_spirit", "rate": 10}]};
+let BASE_DATA={"normal_man":{"id":1,"key":"normal_man","name":"걍사람","grade":"NORMAL","hp":180,"atk":20,"def":20,"attackSpeed":1,"attackArea":45,"attackRange":2,"moveSpeed":2,"bodyRadius":48,"stopGap":16,"critRate":0.15,"attackType":"melee","frameSize":96,"spritePath":"assets/characters/normal_man/","effectPath":"assets/effects/normal_man/attack.png","effectFrames":5,"animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"soundPath":"assets/sounds/normal_man/","gridMovementRule":"screen_width_30_cells","gachaRate":10,"gridMoveSpeed":2,"gridAttackRange":2,"gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2,"feature":"기본 근거리"},"meongdungi":{"id":2,"key":"meongdungi","name":"멍둥이","grade":"NORMAL","hp":180,"atk":20,"def":20,"attackSpeed":1,"attackArea":60,"attackRange":2,"moveSpeed":2,"bodyRadius":48,"stopGap":16,"critRate":0.15,"attackType":"projectile","projectilePath":"assets/projectiles/meongdungi/stone.png","projectileSpeed":520,"frameSize":96,"spritePath":"assets/characters/meongdungi/","effectPath":"assets/effects/meongdungi/attack.png","effectFrames":5,"gachaRate":10,"attackMethod":"입에서 돌맹이가 나옴","feature":"돌멩이 투사체","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"soundPath":"assets/sounds/meongdungi/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":2,"gridAttackRange":2,"gridBattleRule":"30_columns_full_engine","projectileSpeedCells":8,"rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"projectileFrames":1,"projectileStartFrame":0,"projectileFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2},"gomangi":{"id":3,"key":"gomangi","name":"고망이","grade":"RARE","hp":180,"atk":20,"def":50,"damageReduction":0.1,"attackSpeed":1,"attackArea":45,"attackRange":2,"moveSpeed":2,"bodyRadius":64,"stopGap":16,"critRate":0.15,"attackType":"melee","frameSize":96,"spritePath":"assets/characters/gomangi/","effectPath":"assets/effects/gomangi/attack.png","effectFrames":5,"gachaRate":10,"attackMethod":"주먹을 위에서 아래로 내려친다","feature":"피해 10% 감소","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"soundPath":"assets/sounds/gomangi/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":2,"gridAttackRange":2,"gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2},"eungae":{"id":4,"key":"eungae","name":"응애","grade":"NORMAL","hp":140,"atk":20,"def":10,"attackSpeed":2,"attackArea":60,"attackRange":6,"moveSpeed":2,"bodyRadius":36,"stopGap":16,"critRate":0.15,"attackType":"projectile","projectilePath":"assets/projectiles/eungae/candy.png","projectileSpeed":620,"frameSize":96,"spritePath":"assets/characters/eungae/","effectPath":"assets/effects/eungae/attack.png","effectFrames":5,"gachaRate":10,"attackMethod":"입에서 사탕을 뱉음","feature":"사탕 투사체","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"soundPath":"assets/sounds/eungae/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":2,"gridAttackRange":6,"gridBattleRule":"30_columns_full_engine","projectileSpeedCells":8,"rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"projectileFrames":1,"projectileStartFrame":0,"projectileFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2},"awakened_normal_man":{"id":5,"key":"awakened_normal_man","name":"각성한 걍사람","grade":"SPECIAL","hp":200,"atk":35,"def":80,"attackSpeed":2.5,"attackArea":70,"attackRange":4,"moveSpeed":3,"bodyRadius":56,"stopGap":18,"critRate":0.15,"attackType":"melee","frameSize":96,"spritePath":"assets/characters/awakened_normal_man/","effectPath":"assets/effects/awakened_normal_man/attack.png","effectFrames":5,"gachaRate":10,"attackMethod":"몸 중심에서 각성 에너지를 예열한 뒤 전방으로 방출한다. Frame1~3은 예열, Frame4부터 히트가 시작되고 Frame5는 상대 방향으로 크게 뻗는다.","feature":"중심 각성 이펙트 후 전방 방출","animations":{"idle":2,"walk":4,"attack":4,"hit":1,"dead":2,"win":4},"soundPath":"assets/sounds/awakened_normal_man/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":3,"gridAttackRange":4,"gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"x2_v0.6.1_v0.8.22_awakened_effect5_forward","effectStartFrame":0,"effectFrameWidth":192,"centerEffect":true,"effectAnchor":"attacker_center","effectFrameSequence":[0,1,2,3,4],"effectFrameOffsets":[0,20,40,40,96],"effectScale":1.35,"hitEffect":true,"hitEffectStart":0.6,"critDamageMin":1.5,"critDamageMax":3},"bokjujok":{"id":6,"key":"bokjujok","name":"폭주족","grade":"EPIC","hp":120,"atk":25,"def":40,"attackSpeed":4,"attackArea":45,"attackRange":2,"moveSpeed":3.5,"bodyRadius":48,"stopGap":16,"critRate":0.15,"attackType":"melee","frameSize":96,"spritePath":"assets/characters/bokjujok/","effectPath":"assets/effects/bokjujok/attack.png","effectFrames":6,"gachaRate":10,"attackMethod":"손이 여러 개 보이도록 공격","feature":"연속 손 공격","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"aiType":"rush","soundPath":"assets/sounds/bokjujok/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":3.5,"gridAttackRange":2,"gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2},"jjabbeorin":{"id":7,"key":"jjabbeorin","name":"짭버린","grade":"EPIC","hp":120,"atk":25,"def":50,"attackSpeed":4,"attackArea":45,"attackRange":2,"moveSpeed":3.5,"bodyRadius":48,"stopGap":16,"critRate":0.15,"attackType":"melee","frameSize":96,"spritePath":"assets/characters/jjabbeorin/","effectPath":"assets/effects/jjabbeorin/attack.png","effectFrames":6,"gachaRate":10,"attackMethod":"손등에 튀어나온 칼날손톱으로 공격","feature":"칼날손톱 공격","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"aiType":"rush","soundPath":"assets/sounds/jjabbeorin/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":3.5,"gridAttackRange":2,"gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2},"storm_spirit":{"id":8,"key":"storm_spirit","name":"폭풍정령","grade":"LEGENDARY","hp":120,"atk":35,"def":80,"attackSpeed":5,"attackArea":70,"attackRange":4,"moveSpeed":3,"bodyRadius":56,"stopGap":18,"critRate":0.15,"attackType":"projectile","projectilePath":"assets/projectiles/storm_spirit/tornado.png","projectileSpeed":680,"projectileFrames":6,"frameSize":96,"spritePath":"assets/characters/storm_spirit/","effectPath":"assets/effects/storm_spirit/attack.png","effectFrames":6,"gachaRate":10,"attackMethod":"강력한 회오리를 발사","feature":"회오리 발사","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"aiType":"projectile","soundPath":"assets/sounds/storm_spirit/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":3,"gridAttackRange":4,"gridBattleRule":"30_columns_full_engine","projectileSpeedCells":8,"rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"projectileStartFrame":0,"projectileFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2.5},"vampire_king":{"id":9,"key":"vampire_king","name":"뱀파이어킹","grade":"SUPER EPIC","hp":100,"atk":35,"def":50,"attackSpeed":2,"attackArea":90,"attackRange":6,"moveSpeed":3,"bodyRadius":56,"stopGap":18,"critRate":0.15,"attackType":"projectile","projectilePath":"assets/projectiles/vampire_king/blood_wave.png","projectileSpeed":580,"projectileFrames":6,"lifeSteal":0.2,"frameSize":96,"spritePath":"assets/characters/vampire_king/","effectPath":"assets/effects/vampire_king/attack.png","effectFrames":6,"gachaRate":10,"attackMethod":"술잔에 든 진한 빨간 피를 흩뿌린다","feature":"20% 흡혈","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2},"aiType":"projectile","soundPath":"assets/sounds/vampire_king/","gridMovementRule":"screen_width_30_cells","gridMoveSpeed":3,"gridAttackRange":6,"gridBattleRule":"30_columns_full_engine","projectileSpeedCells":8,"rangeMultiplierApplied":"x2_v0.6.1","effectStartFrame":0,"effectFrameWidth":96,"projectileStartFrame":0,"projectileFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2.5},"fire_spirit":{"id":10,"key":"fire_spirit","name":"불꽃정령","grade":"LEGENDARY","hp":120,"atk":30,"def":60,"attackSpeed":2,"attackArea":5,"attackRange":10,"gridAttackRange":10,"moveSpeed":2,"gridMoveSpeed":2,"bodyRadius":56,"stopGap":18,"critRate":0.15,"attackType":"projectile","projectilePath":"assets/projectiles/fire_spirit/fire_ground.png","projectileSpeedCells":8,"projectileFrames":5,"frameSize":96,"spritePath":"assets/characters/fire_spirit/","effectPath":"assets/effects/fire_spirit/attack.png","effectFrames":5,"soundPath":"assets/sounds/fire_spirit/","gachaRate":10,"attackMethod":"불꽃을 손으로 쏴서 지면을 불태운다.","feature":"지면 불꽃 공격","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2,"win":4},"aiType":"projectile","gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"none_fire_spirit_v0.6.5","effectStartFrame":1,"effectFrameWidth":96,"projectileStartFrame":1,"projectileFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2.5},"lightning_spirit":{"id":11,"key":"lightning_spirit","name":"번개정령","grade":"LEGENDARY","hp":120,"atk":35,"def":60,"attackSpeed":2,"attackArea":8,"attackRange":10,"gridAttackRange":10,"moveSpeed":2,"gridMoveSpeed":2,"bodyRadius":56,"stopGap":18,"critRate":0.15,"attackType":"projectile","projectilePath":"assets/projectiles/lightning_spirit/lightning_bolt.png","projectileSpeedCells":10,"projectileFrames":4,"frameSize":96,"spritePath":"assets/characters/lightning_spirit/","effectPath":"assets/effects/lightning_spirit/attack.png","effectFrames":4,"soundPath":"assets/sounds/lightning_spirit/","gachaRate":10,"attackMethod":"번개를 손으로 쏴서 꿰뚫는다","feature":"원거리 번개 공격","animations":{"idle":2,"walk":4,"attack":3,"hit":1,"dead":2,"win":4},"aiType":"projectile","gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"none_lightning_spirit_v0.8.5","effectStartFrame":0,"effectFrameWidth":96,"projectileStartFrame":0,"projectileFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2.5},"little_spirit":{"id":12,"key":"little_spirit","name":"꼬마정령","grade":"LEGENDARY","hp":100,"atk":40,"def":50,"attackSpeed":2,"attackArea":5,"attackRange":5,"gridAttackRange":5,"moveSpeed":4,"gridMoveSpeed":4,"bodyRadius":36,"stopGap":14,"critRate":0.15,"attackType":"melee","lifeSteal":0.15,"extraHitChance":0.5,"extraHitAtk":20,"frameSize":96,"spritePath":"assets/characters/little_spirit/","effectPath":"assets/effects/little_spirit/attack.png","effectFrames":6,"soundPath":"assets/sounds/little_spirit/","gachaRate":10,"attackMethod":"공격 시 50% 확률로 2번 공격한다. 2번째 공격은 공격력 20으로 계산한다.","feature":"15% 흡혈, 50% 확률 2타","animations":{"idle":2,"walk":4,"attack":4,"hit":1,"dead":2,"win":4},"aiType":"rush","gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"none_little_spirit_v0.8.11_speed4_grid_removed","effectStartFrame":0,"effectFrameWidth":96,"critDamageMin":1.5,"critDamageMax":3},"slimecute":{"id":13,"key":"slimecute","name":"걍슬라임","grade":"EPIC","hp":85,"atk":90,"def":20,"attackSpeed":2,"attackArea":2,"attackRange":2,"gridAttackRange":2,"moveSpeed":3,"gridMoveSpeed":3,"bodyRadius":42,"stopGap":14,"critRate":0.15,"attackType":"melee","paralyzeChance":1.0,"paralyzeDuration":1.0,"paralyzeCooldownAfter":2.0,"frameSize":96,"spritePath":"assets/characters/slimecute/","effectPath":"assets/effects/slimecute/attack.png","effectFrames":4,"soundPath":"assets/sounds/slimecute/","gachaRate":10,"attackMethod":"공격 시 100% 확률로 상대방을 1초 마비시킨다. 마비 후 2초 동안 다시 마비되지 않는다.","feature":"1초 마비, 2초 재마비 방지","animations":{"idle":2,"walk":6,"attack":6,"hit":1,"dead":2,"win":4},"aiType":"rush","gridBattleRule":"30_columns_full_engine","rangeMultiplierApplied":"none_slimecute_v0.8.15_grid_removed_paralyze_cooldown","effectStartFrame":0,"effectFrameWidth":96,"critDamageMin":1.5,"critDamageMax":2}};
+let GACHA_DATA={"pool": [{"key": "normal_man", "rate": 10}, {"key": "meongdungi", "rate": 10}, {"key": "eungae", "rate": 10}, {"key": "gomangi", "rate": 10}, {"key": "bokjujok", "rate": 10}, {"key": "jjabbeorin", "rate": 10}, {"key": "awakened_normal_man", "rate": 10}, {"key": "storm_spirit", "rate": 10}, {"key": "vampire_king", "rate": 10}, {"key": "fire_spirit", "rate": 10}, {"key": "lightning_spirit", "rate": 10}, {"key": "little_spirit", "rate": 10}, {"key": "slimecute", "rate": 10}]};
+// v0.8.21 slime safety restore: slimecute must stay in gacha/profile/battle data.
+if(BASE_DATA.slimecute && !GACHA_DATA.pool.some(it=>it.key==='slimecute')) GACHA_DATA.pool.push({key:'slimecute',rate:BASE_DATA.slimecute.gachaRate||10});
+
+
+
+function critMultiplier(u){
+ const min=Number.isFinite(Number(u.critDamageMin))?Number(u.critDamageMin):(Number.isFinite(Number(u.criticalMin))?Number(u.criticalMin):(Number.isFinite(Number(u.criticalMultiplier))?Number(u.criticalMultiplier):1.5));
+ const max=Number.isFinite(Number(u.critDamageMax))?Number(u.critDamageMax):(Number.isFinite(Number(u.criticalMax))?Number(u.criticalMax):min);
+ const lo=Math.min(min,max);
+ const hi=Math.max(min,max);
+ if(hi<=lo)return lo;
+ return lo+Math.random()*(hi-lo);
+}
 
 function loadImage(src){return new Promise(resolve=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>resolve(null);img.src=src;});}
 function inRect(p,r){return p.x>=r.x&&p.x<=r.x+r.w&&p.y>=r.y&&p.y<=r.y+r.h;}
@@ -49,8 +62,91 @@ function modernPanel(c,x,y,w,h,r=18,tone='neutral'){
 
 function gradeColor(g){return g==='SPECIAL'?'rainbow':g==='SUPER EPIC'?'super':(g==='LEGEND'||g==='LEGENDARY')?'#d49a00':g==='EPIC'?'#7d3cff':g==='RARE'?'#2d6cdf':'#555';}
 
+
+// v1.0.0 Data-Driven loader: 캐릭터/스킬/이펙트/가챠 데이터를 JSON에서 우선 로드한다.
+async function loadJsonSafe(url){
+ try{const r=await fetch(url,{cache:'no-store'}); if(!r.ok) throw new Error(url+' '+r.status); return await r.json();}
+ catch(e){console.warn('[DataDriven] JSON load failed:',url,e); return null;}
+}
+function normalizeCharacterData(raw){
+ const d={...raw};
+ const st=d.stats||{};
+ const cr=d.critical||{};
+ const ga=d.gacha||{};
+ const co=d.combat||{};
+ const as=d.assets||{};
+ const ef=d.effect||{};
+ const pr=d.projectile||{};
+ d.hp=Number(st.hp??d.hp??100);
+ d.atk=Number(st.attack??st.atk??d.atk??10);
+ d.def=Number(st.defense??st.def??d.def??0);
+ d.attackSpeed=Number(st.attackSpeed??d.attackSpeed??1);
+ d.attackArea=Number(st.attackArea??d.attackArea??45);
+ d.attackRange=Number(st.attackRange??d.attackRange??2);
+ d.moveSpeed=Number(st.moveSpeed??d.moveSpeed??2);
+ d.bodyRadius=Number(st.bodyRadius??d.bodyRadius??48);
+ d.stopGap=Number(st.stopGap??d.stopGap??16);
+ d.gridMoveSpeed=Number(st.gridMoveSpeed??d.gridMoveSpeed??d.moveSpeed);
+ d.gridAttackRange=Number(st.gridAttackRange??d.gridAttackRange??d.attackRange);
+ d.critRate=Number(cr.chance??d.critRate??0.15); if(d.critRate>1)d.critRate=d.critRate/100;
+ d.critDamageMin=Number(cr.min??d.critDamageMin??d.criticalMin??d.criticalMultiplier??1.5);
+ d.critDamageMax=Number(cr.max??d.critDamageMax??d.criticalMax??d.critDamageMin);
+ d.gachaRate=Number(ga.weight??ga.rate??d.gachaRate??10);
+ d.attackType=co.attackType??d.attackType??'melee';
+ d.aiType=co.aiType??d.aiType;
+ d.attackMethod=co.attackMethod??d.attackMethod??'';
+ d.feature=co.feature??d.feature??'';
+ d.spritePath=as.spritePath??d.spritePath??('assets/characters/'+d.key+'/');
+ d.effectPath=ef.path??as.effectPath??d.effectPath;
+ d.soundPath=as.soundPath??d.soundPath??('assets/sounds/'+d.key+'/');
+ d.projectilePath=pr.path??as.projectilePath??d.projectilePath;
+ d.effectFrames=Number(ef.frames??d.effectFrames??5);
+ d.effectStartFrame=Number(ef.startFrame??d.effectStartFrame??0);
+ d.effectFrameWidth=Number(ef.frameWidth??d.effectFrameWidth??96);
+ d.centerEffect=Boolean(ef.centerEffect??d.centerEffect??false);
+ d.effectAnchor=ef.anchor??d.effectAnchor;
+ d.effectScale=Number(ef.scale??d.effectScale??1);
+ d.effectFrameSequence=ef.frameSequence??d.effectFrameSequence;
+ d.effectFrameOffsets=ef.frameOffsets??d.effectFrameOffsets;
+ d.hitEffect=Boolean(ef.hitEffect??d.hitEffect??false);
+ d.hitEffectStart=Number(ef.hitEffectStart??d.hitEffectStart??0.38);
+ if(d.projectilePath){
+  d.projectileSpeed=Number(pr.speed??d.projectileSpeed??520);
+  d.projectileSpeedCells=Number(pr.speedCells??d.projectileSpeedCells??8);
+  d.projectileFrames=Number(pr.frames??d.projectileFrames??1);
+  d.projectileStartFrame=Number(pr.startFrame??d.projectileStartFrame??0);
+  d.projectileFrameWidth=Number(pr.frameWidth??d.projectileFrameWidth??96);
+ }
+ for(const s of (d.skills||[])){
+  if(s.type==='lifesteal') d.lifeSteal=Number(s.value??0);
+  if(s.type==='double_attack'){d.extraHitChance=Number(s.chance??0); if(d.extraHitChance>1)d.extraHitChance/=100; d.extraHitAtk=Number(s.damage??d.atk);}
+  if(s.type==='paralyze'){d.paralyzeChance=Number(s.chance??1); if(d.paralyzeChance>1)d.paralyzeChance/=100; d.paralyzeDuration=Number(s.duration??1); d.paralyzeCooldownAfter=Number(s.cooldownAfter??2);}
+  if(s.type==='damage_reduction') d.damageReduction=Number(s.value??0);
+ }
+ d.frameSize=Number(d.frameSize??96);
+ d.animations=d.animations||{idle:2,walk:4,attack:3,hit:1,dead:2};
+ return d;
+}
+async function loadCharacterDatabase(){
+ const manifest=await loadJsonSafe('data/character_manifest.json');
+ if(!Array.isArray(manifest)) return null;
+ const out={};
+ for(const path of manifest){
+  const raw=await loadJsonSafe(path);
+  if(raw&&raw.key) out[raw.key]=normalizeCharacterData(raw);
+ }
+ if(!Object.keys(out).length) return null;
+ let gacha=await loadJsonSafe('data/gacha.json');
+ if(!gacha||!Array.isArray(gacha.pool)) gacha={pool:Object.values(out).map(d=>({key:d.key,rate:d.gachaRate||10}))};
+ gacha.pool=gacha.pool.filter(it=>out[it.key]).map(it=>({key:it.key,rate:Number(it.rate??it.weight??out[it.key].gachaRate??10)}));
+ return {characters:out,gacha};
+}
+
 class Assets{
  async load(){
+  const db=await loadCharacterDatabase();
+  if(db){BASE_DATA=db.characters;GACHA_DATA=db.gacha;}
+  if(BASE_DATA.slimecute && !GACHA_DATA.pool.some(it=>it.key==='slimecute')) GACHA_DATA.pool.push({key:'slimecute',rate:BASE_DATA.slimecute.gachaRate||10});
   this.bg=await loadImage('assets/bg/wasteland_sketch.png');
   this.characters={};
   for(const key of Object.keys(BASE_DATA)){
@@ -125,18 +221,29 @@ class Button{
 class Effects{
  constructor(){this.items=[];this.heals=[];this.shake=0;this.hitStop=0;}
  clear(){this.items=[];this.heals=[];this.shake=0;this.hitStop=0;}
- spawn(target,attacker,dmg,crit){this.items.push({x:target.x-attacker.dir*18,y:(attacker.attackType==='projectile'?target.y+12:target.y-25),dmg,crit,img:attacker.effectImage,frames:attacker.effectFrames||5,start:attacker.effectStartFrame||0,fw:attacker.effectFrameWidth||96,t:0,l:crit?.55:.4,key:attacker.key,ground:attacker.attackType==='projectile'});this.shake=crit?.22:.12;this.hitStop=crit?.06:.035;}
+ spawn(target,attacker,dmg,crit){let cx=attacker.centerEffect?attacker.x:(target.x-attacker.dir*18),cy=attacker.centerEffect?(attacker.y-48):(attacker.attackType==='projectile'?target.y+12:target.y-25);let dur=attacker.effectFrameSequence?Math.max(.4,attacker.effectFrameSequence.length/18):(crit?.55:.4);this.items.push({x:cx,y:cy,tx:target.x,ty:target.y-48,dmg,crit,img:attacker.effectImage,frames:attacker.effectFrames||5,start:attacker.effectStartFrame||0,fw:attacker.effectFrameWidth||96,seq:attacker.effectFrameSequence||null,offsets:attacker.effectFrameOffsets||null,dir:attacker.dir||1,t:0,l:dur,key:attacker.key,ground:attacker.attackType==='projectile'&&!attacker.centerEffect,center:!!attacker.centerEffect,scale:attacker.effectScale||1,hitEffect:!!attacker.hitEffect,hitStart:attacker.hitEffectStart||.38});this.shake=crit?.22:.12;this.hitStop=crit?.06:.035;}
  update(dt){let rd=dt;if(this.hitStop>0){this.hitStop-=dt;dt=0;}for(const e of this.items)e.t+=rd;this.items=this.items.filter(e=>e.t<e.l);for(const h of this.heals)h.t+=rd;this.heals=this.heals.filter(h=>h.t<h.l);if(this.shake>0)this.shake-=rd;}spawnHeal(x,y,amount){if(amount>0)this.heals.push({x,y,amount,t:0,l:.65});}
  offset(){return this.shake>0?{x:(Math.random()-.5)*10,y:(Math.random()-.5)*6}:{x:0,y:0};}
  frozen(){return this.hitStop>0;}
- draw(c){for(const h of this.heals){let p=h.t/h.l;c.save();c.globalAlpha=1-p;c.fillStyle='#118833';c.font='bold 22px sans-serif';c.textAlign='center';c.fillText('+'+h.amount,h.x,h.y-95-p*35);c.restore();}for(const e of this.items){let p=e.t/e.l,total=e.frames||5,start=e.start||0,fw=e.fw||96,playable=Math.max(1,total-start),fr=start+Math.min(playable-1,Math.floor(p*playable));c.save();c.globalAlpha=1-p*.25;if(e.img){
+ draw(c){for(const h of this.heals){let p=h.t/h.l;c.save();c.globalAlpha=1-p;c.fillStyle='#118833';c.font='bold 22px sans-serif';c.textAlign='center';c.fillText('+'+h.amount,h.x,h.y-95-p*35);c.restore();}for(const e of this.items){let p=e.t/e.l,total=e.frames||5,start=e.start||0,fw=e.fw||96,playable=Math.max(1,total-start),fr=start+Math.min(playable-1,Math.floor(p*playable));if(e.seq&&e.seq.length){fr=e.seq[Math.min(e.seq.length-1,Math.floor(p*e.seq.length))];}c.save();c.globalAlpha=1-p*.25;if(e.img){
  if(e.ground){
-  // 원거리 공격 이펙트는 지면에 깔리는 느낌으로 낮고 넓게 표시
-  c.drawImage(e.img,fr*fw,0,fw,96,e.x-95,e.y-8,190,62);
+  // v0.8.26: EffectRenderer 공통 처리. 공격 방향(dir)에 따라 모든 지면/원거리 이펙트를 좌우 반전한다.
+  const gd=e.dir<0?-1:1;
+  c.save();
+  c.translate(e.x,e.y);
+  c.scale(gd,1);
+  c.drawImage(e.img,fr*fw,0,fw,96,-95,-8,190,62);
+  c.restore();
  }else{
-  c.drawImage(e.img,fr*fw,0,fw,96,e.x-48,e.y-58,120,120);
+  // v0.8.26: 캐릭터별 예외가 아니라 EffectRenderer에서 전체 공격 이펙트 방향을 통일 처리한다.
+  let sc=e.scale||1,sz=120*sc,ox=(e.offsets&&e.offsets[fr]?e.offsets[fr]:0)*(e.dir||1),dx=e.x+ox,dy=e.y;
+  c.save();
+  c.translate(dx,dy);
+  if(e.dir<0)c.scale(-1,1);
+  c.drawImage(e.img,fr*fw,0,fw,96,-sz/2,-sz/2,sz,sz);
+  c.restore();
  }
-}if(e.key==='jjabbeorin'){c.globalAlpha=.75-p*.5;c.strokeStyle='#2f8cff';c.lineWidth=4;for(let s=0;s<3;s++){c.beginPath();c.moveTo(e.x-55+fr*8,e.y-35+s*20);c.quadraticCurveTo(e.x,e.y-65+s*8,e.x+55-fr*4,e.y-15+s*18);c.stroke();}}c.fillStyle='#111';c.font=e.crit?'bold 32px sans-serif':'bold 22px sans-serif';c.textAlign='center';c.fillText((e.crit?'CRIT ':'')+'-'+e.dmg,e.x,e.y-75-p*45);c.restore();}}
+}if(e.key==='jjabbeorin'){c.globalAlpha=.75-p*.5;c.strokeStyle='#2f8cff';c.lineWidth=4;for(let s=0;s<3;s++){c.beginPath();c.moveTo(e.x-55+fr*8,e.y-35+s*20);c.quadraticCurveTo(e.x,e.y-65+s*8,e.x+55-fr*4,e.y-15+s*18);c.stroke();}}if(e.hitEffect&&p>=e.hitStart){let hp=(p-e.hitStart)/(1-e.hitStart);let hx=e.tx,hy=e.ty;c.save();c.globalAlpha=Math.max(0,1-hp*.75);c.lineWidth=3;for(let r=0;r<3;r++){c.beginPath();c.strokeStyle=['#fff2a8','#8fffd7','#ff8df3'][r];c.arc(hx,hy,18+r*10+hp*26,0,Math.PI*2);c.stroke();}for(let k=0;k<10;k++){let a=(Math.PI*2/10)*k+hp*2,rr=26+hp*45;c.beginPath();c.moveTo(hx+Math.cos(a)*12,hy+Math.sin(a)*12);c.lineTo(hx+Math.cos(a)*rr,hy+Math.sin(a)*rr);c.strokeStyle=['#ffcf52','#55e7ff','#b76cff','#ff7f7f'][k%4];c.stroke();}c.restore();}c.fillStyle=e.crit?'#8b0000':'#111';c.font=e.crit?'bold 32px sans-serif':'bold 22px sans-serif';c.textAlign='center';c.fillText((e.crit?'CRIT ':'')+'-'+e.dmg,e.hitEffect?e.tx:e.x,(e.hitEffect?e.ty:e.y)-75-p*45);c.restore();}}
 }
 
 class Projectile{
@@ -185,9 +292,10 @@ this.img=owner.projectileImage;
 
   let dmg=Math.max(1,Math.round(this.o.atk*(100/(100+this.t.def))));
   let crit=Math.random()<(this.o.critRate||0);
-  if(crit)dmg=Math.round(dmg*(1.5+Math.random()));
+  if(crit)dmg=Math.round(dmg*critMultiplier(this.o));
 
   let final=this.t.damage(dmg,crit);
+  if(this.o.paralyzeChance&&(this.t.paralyzeCooldown||0)<=0&&Math.random()<this.o.paralyzeChance){const pd=this.o.paralyzeDuration||1;this.t.stunTimer=Math.max(this.t.stunTimer||0,pd);this.t.paralyzeCooldown=pd+(this.o.paralyzeCooldownAfter||2);}
 
   if(this.o.lifeSteal){
    let heal=Math.max(1,Math.round(final*this.o.lifeSteal));
@@ -232,11 +340,11 @@ this.gridAttackRange=this.gridAttackRange||this.attackRange||1;
 this.moveSpeed=this.gridMoveSpeed*GRID_CELL;
 this.attackRange=this.gridAttackRange*GRID_CELL;
 if(this.projectileSpeedCells)this.projectileSpeed=this.projectileSpeedCells*GRID_CELL;
-this.x=x;this.y=505;this.dir=dir;this.maxHp=this.hp;this.state='idle';this.frame=0;this.anim=0;this.attackTimer=.25;this.attackAnimLock=0;this.hitTimer=0;this.knock=0;this.flash=0;this.isDead=false;
+this.x=x;this.y=505;this.dir=dir;this.maxHp=this.hp;this.state='idle';this.frame=0;this.anim=0;this.attackTimer=.25;this.attackAnimLock=0;this.hitTimer=0;this.stunTimer=0;this.paralyzeCooldown=0;this.knock=0;this.flash=0;this.isDead=false;
 }
- update(dt){if(this.hp<=0){this.hp=0;this.isDead=true;this.state='dead';}this.anim+=dt;let cnt=this.animations[this.state]||1,sp=this.state==='walk'?8:this.state==='attack'?12:3;this.frame=Math.floor(this.anim*sp)%cnt;if(this.hitTimer>0)this.hitTimer-=dt;if(this.attackAnimLock>0)this.attackAnimLock-=dt;if(this.flash>0)this.flash-=dt;if(this.knock>0)this.knock=Math.max(0,this.knock-dt*90);}
+ update(dt){if(this.hp<=0){this.hp=0;this.isDead=true;this.state='dead';}this.anim+=dt;let cnt=this.animations[this.state]||1,sp=this.state==='walk'?8:this.state==='attack'?12:3;this.frame=Math.floor(this.anim*sp)%cnt;if(this.hitTimer>0)this.hitTimer-=dt;if(this.paralyzeCooldown>0)this.paralyzeCooldown=Math.max(0,this.paralyzeCooldown-dt);if(this.stunTimer>0){this.stunTimer=Math.max(0,this.stunTimer-dt);if(this.hp>0)this.state='hit';}if(this.attackAnimLock>0)this.attackAnimLock-=dt;if(this.flash>0)this.flash-=dt;if(this.knock>0)this.knock=Math.max(0,this.knock-dt*90);}
  damage(v,crit){let final=Math.max(1,Math.round(v*(1-(this.damageReduction||0))));this.hp=Math.max(0,this.hp-final);this.hitTimer=.15;this.flash=crit?.18:.1;this.knock=0;if(this.hp>0)this.state='hit';return final;}
- draw(c,debug,hidden=false){c.save();c.fillStyle='rgba(0,0,0,.12)';c.beginPath();c.ellipse(this.x,this.y+42,45,12,0,0,6.28);c.fill();if(hidden){this.drawHidden(c);c.restore();return;}this.hpbar(c, this.dir<0 ? 78 : -78, -18);if(debug)this.debug(c);let img=this.sprites[this.state]||this.sprites.idle;c.translate(this.x-this.dir*this.knock,this.y);c.scale(this.dir,1);if(img)c.drawImage(img,this.frame*this.frameSize,0,this.frameSize,this.frameSize,-96,-118,192,192);if(this.flash>0){c.globalAlpha=Math.min(.65,this.flash*5);c.fillStyle='#fff';c.globalCompositeOperation='source-atop';c.fillRect(-96,-118,192,192);}c.restore();}
+ draw(c,debug,hidden=false){c.save();c.fillStyle='rgba(0,0,0,.12)';c.beginPath();c.ellipse(this.x,this.y+42,45,12,0,0,6.28);c.fill();if(hidden){this.drawHidden(c);c.restore();return;}this.hpbar(c, this.dir<0 ? 78 : -78, -18);if(debug)this.debug(c);let img=this.sprites[this.state]||this.sprites.idle;c.translate(this.x-this.dir*this.knock,this.y);c.scale(this.dir,1);if(img)c.drawImage(img,this.frame*this.frameSize,0,this.frameSize,this.frameSize,-96,-118,192,192);if(this.flash>0){c.globalAlpha=Math.min(.65,this.flash*5);c.fillStyle='#fff';c.globalCompositeOperation='source-atop';c.fillRect(-96,-118,192,192);}c.restore();if(this.stunTimer>0){c.save();c.textAlign='center';c.font='bold 18px sans-serif';c.fillStyle='#2d8cff';c.fillText('마비',this.x,this.y-172);c.strokeStyle='rgba(45,140,255,.75)';c.lineWidth=3;c.beginPath();c.ellipse(this.x,this.y-122,36,10,0,0,6.28);c.stroke();c.restore();}}
  drawHidden(c){c.save();c.textAlign='center';c.fillStyle='rgba(255,255,255,.95)';c.fillRect(this.x-65,this.y-150,130,150);c.strokeStyle='#111';c.lineWidth=3;c.strokeRect(this.x-65,this.y-150,130,150);c.fillStyle='#111';c.font='bold 86px sans-serif';c.fillText('?',this.x,this.y-45);c.font='18px sans-serif';c.fillText('상대 미공개',this.x,this.y-15);c.restore();}
  hpbar(c,ox=0,oy=0){
 c.save();
@@ -283,7 +391,7 @@ class Battle{
  pickNextEnemy(){let keys=Object.keys(BASE_DATA).filter(k=>k!==this.playerKey&&k!=='training_dummy');let pool=keys.filter(k=>!this.usedEnemies.includes(k));if(pool.length===0){this.usedEnemies=[];pool=keys;}let pick=pool[Math.floor(Math.random()*pool.length)];this.usedEnemies.push(pick);return pick;}
  reset(start=false){if(!this.playerKey)return;this.player=new Fighter(this.a.create(this.playerKey),230,1);this.enemy=new Fighter(this.a.create(this.enemyKey),1040,-1);this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();this.nextRoundTimer=0;this.state=start?'approach':'ready';this.running=start;}
  start(){if(!this.playerKey){this.state='select';return;}if(this.state==='finished'&&!this.player.isDead){this.startNextRound();return;}this.reset(true);}
- startNextRound(){if(!this.playerKey||this.player.isDead)return;let keepHp=Math.min(this.player.maxHp,this.player.hp+Math.max(1,Math.round(this.player.maxHp*.2)));this.enemyKey=this.pickNextEnemy();this.player.x=230;this.player.y=505;this.player.dir=1;this.player.hp=keepHp;this.player.isDead=false;this.player.state='idle';this.player.frame=0;this.player.anim=0;this.player.attackTimer=.25;this.player.attackAnimLock=0;this.player.hitTimer=0;this.player.knock=0;this.player.flash=0;this.enemy=new Fighter(this.a.create(this.enemyKey),1040,-1);this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();this.nextRoundTimer=0;this.state='approach';this.running=true;}
+ startNextRound(){if(!this.playerKey||this.player.isDead)return;let keepHp=Math.min(this.player.maxHp,this.player.hp+Math.max(1,Math.round(this.player.maxHp*.2)));this.enemyKey=this.pickNextEnemy();this.player.x=230;this.player.y=505;this.player.dir=1;this.player.hp=keepHp;this.player.isDead=false;this.player.state='idle';this.player.frame=0;this.player.anim=0;this.player.attackTimer=.25;this.player.attackAnimLock=0;this.player.hitTimer=0;this.player.stunTimer=0;this.player.paralyzeCooldown=0;this.player.knock=0;this.player.flash=0;this.enemy=new Fighter(this.a.create(this.enemyKey),1040,-1);this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();this.nextRoundTimer=0;this.state='approach';this.running=true;}
  update(dt){if(!this.playerKey)return;if(!this.running){this.player.update(dt);this.enemy.update(dt);return;}if(this.e.frozen())return;if(this.player.isDead||this.enemy.isDead){if(this.state!=='finished'){this.projectiles=[];if(this.e&&this.e.clear)this.e.clear();if(this.player.isDead){this.lose++;this.streak=0;}else{this.win++;this.streak++;this.nextRoundTimer=0;}let winner=this.player.isDead?this.enemy:this.player;if(winner.animations&&winner.animations.win){winner.state='win';winner.anim=0;winner.frame=0;}if(this.audio)this.audio.system(this.player.isDead?'defeat':'victory');}this.state='finished';this.running=false;this.player.update(dt);this.enemy.update(dt);return;}this.unit(this.player,this.enemy,dt);this.unit(this.enemy,this.player,dt);this.projectiles.forEach(p=>p.update(dt,this.e));this.projectiles=this.projectiles.filter(p=>!p.dead);this.prevent();this.player.update(dt);this.enemy.update(dt);}
  stop(u,t){
  // 30칸 기준 전투 규칙:
@@ -295,9 +403,10 @@ class Battle{
  return Math.max(rangePx,body);
 }
 gridDistance(u,t){return Math.abs(t.x-u.x)/GRID_CELL;}
-calc(u,t){let dmg=Math.max(1,Math.round(u.atk*(100/(100+t.def))));let crit=Math.random()<(u.critRate||0);if(crit)dmg=Math.round(dmg*(1.5+Math.random()));return {dmg,crit};}
+calc(u,t){let dmg=Math.max(1,Math.round(u.atk*(100/(100+t.def))));let crit=Math.random()<(u.critRate||0);if(crit)dmg=Math.round(dmg*critMultiplier(u));return {dmg,crit};}
  unit(u,t,dt){
  if(!this.running||u.isDead||t.isDead)return;
+ if(u.stunTimer>0)return;
  if(u.state==='hit'&&u.hitTimer>0)return;
 
  const distPx=Math.abs(t.x-u.x);
@@ -325,6 +434,7 @@ calc(u,t){let dmg=Math.max(1,Math.round(u.atk*(100/(100+t.def))));let crit=Math.
   }else{
    let r=this.calc(u,t);
    let final=t.damage(r.dmg,r.crit);
+   if(u.paralyzeChance&&(t.paralyzeCooldown||0)<=0&&Math.random()<u.paralyzeChance){const pd=u.paralyzeDuration||1;t.stunTimer=Math.max(t.stunTimer||0,pd);t.paralyzeCooldown=pd+(u.paralyzeCooldownAfter||2);}
    if(u.lifeSteal){
     let heal=Math.max(1,Math.round(final*u.lifeSteal));
     u.hp=Math.min(u.maxHp,u.hp+heal);
@@ -332,6 +442,22 @@ calc(u,t){let dmg=Math.max(1,Math.round(u.atk*(100/(100+t.def))));let crit=Math.
    }
    if(this.audio)this.audio.hit(t,r.crit);
    this.e.spawn(t,u,final,r.crit);
+
+   // 꼬마정령: 공격 시 50% 확률로 2회 공격. 2타는 공격력 20으로 별도 계산.
+   if(u.extraHitChance&&Math.random()<u.extraHitChance&&!t.isDead&&t.hp>0){
+    let baseAtk=u.extraHitAtk||u.atk;
+    let dmg2=Math.max(1,Math.round(baseAtk*(100/(100+t.def))));
+    let crit2=Math.random()<(u.critRate||0);
+    if(crit2)dmg2=Math.round(dmg2*critMultiplier(u));
+    let final2=t.damage(dmg2,crit2);
+    if(u.lifeSteal){
+     let heal2=Math.max(1,Math.round(final2*u.lifeSteal));
+     u.hp=Math.min(u.maxHp,u.hp+heal2);
+     this.e.spawnHeal(u.x,u.y,heal2);
+    }
+    if(this.audio)this.audio.hit(t,crit2);
+    this.e.spawn(t,u,final2,crit2);
+   }
   }
  }
 }
@@ -384,9 +510,18 @@ class GachaDraft{
 
 
 class ProfileGrid{
- constructor(assets){this.assets=assets;this.visible=false;}
- open(){this.visible=true;}
+ constructor(assets){this.assets=assets;this.visible=false;this.page=0;this.perPage=10;}
+ open(){this.visible=true;this.page=0;}
  close(){this.visible=false;}
+ sortedKeys(){
+  const order={'SPECIAL':0,'LEGENDARY':1,'LEGEND':1,'SUPER EPIC':2,'EPIC':3,'RARE':4,'NORMAL':5};
+  return Object.keys(this.assets.characters).sort((a,b)=>{
+    const da=this.assets.characters[a], db=this.assets.characters[b];
+    const oa=order[da.grade]??99, ob=order[db.grade]??99;
+    if(oa!==ob)return oa-ob;
+    return (da.id||999)-(db.id||999);
+  });
+ }
  draw(c){
   if(!this.visible)return;
   c.save();
@@ -396,12 +531,22 @@ class ProfileGrid{
   c.textAlign='center';
   c.font='bold 30px sans-serif';
   c.fillText('등록 캐릭터 프로필',640,112);
-  const keys=Object.keys(this.assets.characters);
-  const startX=160,startY=145,w=145,h=205,gap=18;
-  keys.forEach((key,i)=>{
+  c.font='14px sans-serif';
+  c.fillStyle='#555';
+  c.fillText('정렬: SPECIAL → LEGENDARY → SUPER EPIC → EPIC → RARE → NORMAL',640,135);
+
+  const keys=this.sortedKeys();
+  const totalPages=Math.max(1,Math.ceil(keys.length/this.perPage));
+  if(this.page>=totalPages)this.page=totalPages-1;
+  const pageKeys=keys.slice(this.page*this.perPage,(this.page+1)*this.perPage);
+
+  const cols=5, rows=2;
+  const w=170,h=190,gapX=24,gapY=22;
+  const startX=165,startY=160;
+  pageKeys.forEach((key,i)=>{
     const d=this.assets.characters[key];
-    const col=i%6,row=Math.floor(i/6);
-    const x=startX+col*(w+gap),y=startY+row*(h+gap);
+    const col=i%cols,row=Math.floor(i/cols);
+    const x=startX+col*(w+gapX),y=startY+row*(h+gapY);
     let gc=gradeColor(d.grade);
     c.fillStyle='rgba(255,255,255,.92)';
     panel(c,x,y,w,h,14);
@@ -417,25 +562,46 @@ class ProfileGrid{
     c.font='bold 13px sans-serif';
     c.fillText(d.grade||'NORMAL',x+w/2,y+20);
     const img=d.sprites.idle;
-    if(img)c.drawImage(img,0,0,96,96,x+24,y+28,96,96);
+    if(img)c.drawImage(img,0,0,96,96,x+w/2-48,y+28,96,96);
     c.fillStyle='#111';
-    c.font=d.name.length>7?'15px sans-serif':'18px sans-serif';
-    c.font=d.name.length>8?'13px sans-serif':d.name.length>6?'15px sans-serif':'18px sans-serif';c.fillText(d.name,x+w/2,y+140);
+    c.font=d.name.length>8?'13px sans-serif':d.name.length>6?'15px sans-serif':'18px sans-serif';
+    c.fillText(d.name,x+w/2,y+135);
     c.font='13px sans-serif';
-    c.fillText('HP '+d.hp+'  ATK '+d.atk,x+w/2,y+162);
-    c.fillText('DEF '+d.def+'  SPD '+d.attackSpeed,x+w/2,y+180);c.fillText('뽑기 '+(d.gachaRate!=null?d.gachaRate:'-')+'%',x+w/2,y+197);
-    c.font='12px sans-serif';c.fillText(d.attackType==='projectile'?'원거리':'근접',x+w/2,y+214);
+    c.fillText('HP '+d.hp+'  ATK '+d.atk,x+w/2,y+154);
+    c.fillText('DEF '+d.def+'  SPD '+d.attackSpeed,x+w/2,y+172);
+    c.font='12px sans-serif';
+    c.fillText('뽑기 '+(d.gachaRate!=null?d.gachaRate:'-')+'% / '+(d.attackType==='projectile'?'원거리':'근접'),x+w/2,y+188);
   });
+
   c.fillStyle='rgba(255,255,255,.92)';
   panel(c,1015,86,120,42,12);
   c.fillStyle='#111';
   c.font='20px sans-serif';
   c.fillText('닫기',1075,114);
+
+  const prevDisabled=this.page<=0, nextDisabled=this.page>=totalPages-1;
+  c.fillStyle=prevDisabled?'rgba(220,220,220,.8)':'rgba(255,255,255,.94)';
+  panel(c,430,585,130,42,12);
+  c.fillStyle=prevDisabled?'#999':'#111';
+  c.font='bold 18px sans-serif';
+  c.fillText('이전',495,612);
+  c.fillStyle='rgba(255,255,255,.0)';
+  c.fillStyle='#111';
+  c.font='bold 16px sans-serif';
+  c.fillText((this.page+1)+' / '+totalPages,640,612);
+  c.fillStyle=nextDisabled?'rgba(220,220,220,.8)':'rgba(255,255,255,.94)';
+  panel(c,720,585,130,42,12);
+  c.fillStyle=nextDisabled?'#999':'#111';
+  c.font='bold 18px sans-serif';
+  c.fillText('다음',785,612);
   c.restore();
  }
  handleClick(p){
   if(!this.visible)return false;
+  const totalPages=Math.max(1,Math.ceil(this.sortedKeys().length/this.perPage));
   if(p.x>=1015&&p.x<=1135&&p.y>=86&&p.y<=128){this.close();return true;}
+  if(p.x>=430&&p.x<=560&&p.y>=585&&p.y<=627){if(this.page>0)this.page--;return true;}
+  if(p.x>=720&&p.x<=850&&p.y>=585&&p.y<=627){if(this.page<totalPages-1)this.page++;return true;}
   if(p.x>=120&&p.x<=1160&&p.y>=70&&p.y<=630)return true;
   return false;
  }
@@ -473,6 +639,6 @@ class Game{
  this.hideDraft=true;
 }),new Button(770,620,180,52,'초기화',()=>{this.draft.reset();this.hideDraft=false;this.battle=new Battle(this.assets,this.effects,this.audio);}),new Button(1070,25,160,46,'캐릭터',()=>{this.audio.unlock();this.audio.system('click');this.profileGrid.open();}),new Button(1070,78,160,46,'사운드 ON',()=>{this.audio.unlock();this.audio.toggle();this.buttons[this.buttons.length-1].label=this.audio.enabled?'사운드 ON':'사운드 OFF';})];requestAnimationFrame(t=>this.loop(t));}
  loop(t){let dt=Math.min((t-this.last)/1000||0,.033);this.last=t;this.effects.update(dt);this.battle.update(dt);this.draft.update(dt);this.draw();requestAnimationFrame(tt=>this.loop(tt));}
- draw(){let c=this.ctx,off=this.effects.offset();c.clearRect(0,0,this.w,this.h);c.save();c.translate(off.x,off.y);if(this.assets.bg)c.drawImage(this.assets.bg,0,0);else{c.fillStyle='#fff';c.fillRect(0,0,this.w,this.h);}this.battle.draw(c,this.debug);this.effects.draw(c);c.restore();if(!this.hideDraft)this.draft.draw(c);this.buttons.forEach(b=>b.draw(c));panel(c,210,685,860,28,10);c.fillStyle='#111';c.textAlign='center';c.font='15px sans-serif';c.fillText('v0.8.8 | 이펙트 투명/전투 종료 정리',640,705);c.textAlign='left';if(this.profileGrid)this.profileGrid.draw(c);}
+ draw(){let c=this.ctx,off=this.effects.offset();c.clearRect(0,0,this.w,this.h);c.save();c.translate(off.x,off.y);if(this.assets.bg)c.drawImage(this.assets.bg,0,0);else{c.fillStyle='#fff';c.fillRect(0,0,this.w,this.h);}this.battle.draw(c,this.debug);this.effects.draw(c);c.restore();if(!this.hideDraft)this.draft.draw(c);this.buttons.forEach(b=>b.draw(c));panel(c,210,685,860,28,10);c.fillStyle='#111';c.textAlign='center';c.font='15px sans-serif';c.fillText('v1.0.0 | Data-Driven 리팩토링',640,705);c.textAlign='right';c.font='bold 15px sans-serif';c.fillStyle='rgba(20,20,20,.92)';c.fillText('Art by 홍은성',1250,705);c.textAlign='left';if(this.profileGrid)this.profileGrid.draw(c);}
 }
 window.onload=()=>new Game();
